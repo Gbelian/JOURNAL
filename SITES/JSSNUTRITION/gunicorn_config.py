@@ -3,10 +3,12 @@ workers = 4
 
 import os
 
+import whitenoise
+
 from JSSNUTRITION.settings import STATIC_URL
 
 from JSSNUTRITION.wsgi import application
 
-application = WhiteNoise(application, root=STATIC_URL)
+application = whitenoise(application, root=STATIC_URL)
 
 STATIC_URL = '/static/'
