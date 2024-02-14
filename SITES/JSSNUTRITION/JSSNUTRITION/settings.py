@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     'Website',
     
@@ -63,6 +64,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'JSSNUTRITION.urls'
@@ -85,7 +87,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'JSSNUTRITION.wsgi.application'
 
-
+# WHITESITE_USE_COMPRESSOR = True
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
