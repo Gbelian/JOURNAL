@@ -7,10 +7,10 @@ from JSSNUTRITION.settings import BASE_DIR, STATIC_URL
 
 from JSSNUTRITION.wsgi import application
 
-application = WhiteNoise(application, root=os.path.join(BASE_DIR, 'staticfiles'))
+application = WhiteNoise(application, root=os.path.join(BASE_DIR, 'static'))
 
 # Serve static files directly by WhiteNoise
-application.add_files(os.path.join(BASE_DIR, 'staticfiles'), prefix=STATIC_URL)
+application.add_files(os.path.join(BASE_DIR, 'static'), prefix=STATIC_URL)
 
 # Enable Gzip compression for served files
-application.add_files(os.path.join(BASE_DIR, 'staticfiles'), prefix=STATIC_URL, gzip=True)
+application.add_files(os.path.join(BASE_DIR, 'static'), prefix=STATIC_URL, gzip=True)
